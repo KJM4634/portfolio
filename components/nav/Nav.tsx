@@ -27,7 +27,7 @@ export default function Nav() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <Link href="/" className="font-heading text-sm font-semibold tracking-tight">
-          김민준<span className="text-accent">.</span>
+          김정민<span className="text-accent">.</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -60,7 +60,7 @@ export default function Nav() {
             className="fixed inset-0 z-50 flex flex-col bg-background md:hidden"
           >
             <div className="flex items-center justify-between px-6 py-4">
-              <span className="font-heading text-sm font-semibold">김민준.</span>
+              <span className="font-heading text-sm font-semibold">김정민.</span>
               <button onClick={() => setOpen(false)} aria-label="메뉴 닫기">
                 <X size={22} />
               </button>

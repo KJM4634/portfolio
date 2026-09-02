@@ -43,7 +43,21 @@ export default async function ProjectPage({ params }: Props) {
       </FadeUp>
 
       <FadeUp delay={0.1}>
-        <h1 className="mt-8 font-heading text-3xl font-semibold tracking-tight sm:text-5xl">
+        {(project.featured || project.award) && (
+          <div className="mt-8 flex flex-wrap items-center gap-2">
+            {project.featured && (
+              <span className="text-xs font-medium uppercase tracking-wide text-accent">
+                대표 프로젝트
+              </span>
+            )}
+            {project.award && (
+              <span className="inline-flex items-center rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
+                {project.award}
+              </span>
+            )}
+          </div>
+        )}
+        <h1 className="mt-3 font-heading text-3xl font-semibold tracking-tight sm:text-5xl">
           {project.title}
         </h1>
       </FadeUp>
@@ -57,7 +71,19 @@ export default async function ProjectPage({ params }: Props) {
       </FadeUp>
 
       <FadeUp delay={0.2}>
-        <div className="mt-6 flex flex-wrap gap-2">
+        <h2 className="mt-10 font-heading text-sm font-medium uppercase tracking-wide text-muted">
+          프로젝트 요약
+        </h2>
+        <p className="mt-4 whitespace-pre-line text-base leading-relaxed text-muted sm:text-lg">
+          {project.description}
+        </p>
+      </FadeUp>
+
+      <FadeUp delay={0.25}>
+        <h2 className="mt-10 font-heading text-sm font-medium uppercase tracking-wide text-muted">
+          활용 기술
+        </h2>
+        <div className="mt-4 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -69,28 +95,42 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </FadeUp>
 
-      <FadeUp delay={0.25}>
-        <p className="mt-10 whitespace-pre-line text-base leading-relaxed text-muted sm:text-lg">
-          {project.description}
-        </p>
-      </FadeUp>
+      {project.keywords && (
+        <FadeUp delay={0.3}>
+          <h2 className="mt-10 font-heading text-sm font-medium uppercase tracking-wide text-muted">
+            융합 분야 키워드
+          </h2>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.keywords.map((keyword) => (
+              <span
+                key={keyword}
+                className="rounded-full border border-accent/30 bg-accent/5 px-2.5 py-1 text-xs text-accent"
+              >
+                {keyword}
+              </span>
+            ))}
+          </div>
+        </FadeUp>
+      )}
 
-      <FadeUp delay={0.3}>
-        <div className="mt-12 flex flex-wrap gap-4">
-          {project.demo && (
-            <MagneticButton href={project.demo} external variant="solid">
-              Live Demo
-              <ArrowUpRight size={16} />
-            </MagneticButton>
-          )}
-          {project.github && (
-            <MagneticButton href={project.github} external variant="outline">
-              <GithubIcon size={16} />
-              GitHub
-            </MagneticButton>
-          )}
-        </div>
-      </FadeUp>
+      {(project.demo || project.github) && (
+        <FadeUp delay={0.35}>
+          <div className="mt-12 flex flex-wrap gap-4">
+            {project.demo && (
+              <MagneticButton href={project.demo} external variant="solid">
+                Live Demo
+                <ArrowUpRight size={16} />
+              </MagneticButton>
+            )}
+            {project.github && (
+              <MagneticButton href={project.github} external variant="outline">
+                <GithubIcon size={16} />
+                GitHub
+              </MagneticButton>
+            )}
+          </div>
+        </FadeUp>
+      )}
     </main>
   );
 }

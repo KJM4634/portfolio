@@ -14,7 +14,7 @@ export default function SkillsGrid() {
         </h2>
       </FadeUp>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2">
+      <div className="mt-12 grid gap-6 sm:grid-cols-3">
         {skills.map((group, i) => (
           <FadeUp key={group.category} delay={0.1 * i}>
             <TiltCard className="h-full p-8">
@@ -24,10 +24,15 @@ export default function SkillsGrid() {
               <ul className="mt-5 flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <li
-                    key={item}
-                    className="rounded-full border border-border px-3 py-1 text-sm text-muted"
+                    key={item.name}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-sm text-muted"
                   >
-                    {item}
+                    {item.name}
+                    {item.learning && (
+                      <span className="rounded-full bg-accent/10 px-1.5 py-0.5 text-[10px] font-medium text-accent">
+                        학습 중
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>

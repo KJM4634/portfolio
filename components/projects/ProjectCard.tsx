@@ -9,9 +9,29 @@ export default function ProjectCard({ project }: { project: Project }) {
     <TiltCard className="flex h-full flex-col p-8">
       <Link href={`/projects/${project.slug}`} className="flex flex-1 flex-col">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="font-heading text-xl font-medium text-foreground">
-            {project.title}
-          </h3>
+          <div>
+            {(project.featured || project.award) && (
+              <div className="mb-2 flex flex-wrap items-center gap-2">
+                {project.featured && (
+                  <span className="text-xs font-medium uppercase tracking-wide text-accent">
+                    대표 프로젝트
+                  </span>
+                )}
+                {project.award && (
+                  <span className="inline-flex items-center rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
+                    {project.award}
+                  </span>
+                )}
+              </div>
+            )}
+            <h3
+              className={`font-heading font-medium text-foreground ${
+                project.featured ? "text-2xl" : "text-xl"
+              }`}
+            >
+              {project.title}
+            </h3>
+          </div>
           <ArrowUpRight
             size={18}
             className="mt-1 shrink-0 text-muted transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"

@@ -4,14 +4,16 @@ export type Credential = {
 };
 
 export const certifications: Credential[] = [
-  { name: "정보처리기사", year: "2024" },
-  { name: "SQLD (SQL 개발자)", year: "2024" },
-  { name: "TOEIC 900+", year: "2025" },
-  { name: "AWS Certified Cloud Practitioner", year: "2025" },
+  { name: "리눅스마스터 2급", year: "2024" },
+  { name: "네트워크관리사 2급", year: "2024" },
+  { name: "코딩활용능력 1급 (Python)", year: "2024" },
+  { name: "전자기기기능사", year: "2019" },
+  { name: "ITQ Master", year: "2019" },
+  { name: "MOS Master", year: "2019" },
+  { name: "컴퓨터활용능력 2급", year: "2019" },
 ];
 
 export const awards: Credential[] = [
-  { name: "교내 AI 해커톤 우수상", year: "2024" },
-  { name: "학과 프로젝트 경진대회 최우수상", year: "2025" },
-  { name: "학부 연구생 우수 발표상", year: "2025" },
+  { name: "AWS AI 활용 파이널 공모전 — 우수상", year: "2025" },
+  { name: "캡스톤 디자인(5개 대학 연합) — 대상", year: "2025" },
 ];

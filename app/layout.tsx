@@ -7,15 +7,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "김민준 — AI Researcher",
-    template: "%s | 김민준",
+    default: "김정민 — Medical AI & Data",
+    template: "%s | 김정민",
   },
   description:
-    "컴퓨터공학을 전공하고 AI 대학원 진학을 준비하는 김민준의 포트폴리오입니다.",
+    "경남대학교 컴퓨터공학부에서 의료 AI와 데이터 분석·예측을 공부하며 인공지능 대학원 진학을 준비하는 김정민의 포트폴리오입니다.",
   openGraph: {
-    title: "김민준 — AI Researcher",
+    title: "김정민 — Medical AI & Data",
     description:
-      "컴퓨터공학을 전공하고 AI 대학원 진학을 준비하는 김민준의 포트폴리오입니다.",
+      "경남대학교 컴퓨터공학부에서 의료 AI와 데이터 분석·예측을 공부하며 인공지능 대학원 진학을 준비하는 김정민의 포트폴리오입니다.",
     type: "website",
   },
 };

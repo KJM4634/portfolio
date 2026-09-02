@@ -16,7 +16,11 @@ export default function ProjectGrid() {
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
         {projects.map((project, i) => (
-          <FadeUp key={project.slug} delay={0.08 * i}>
+          <FadeUp
+            key={project.slug}
+            delay={0.08 * i}
+            className={project.featured ? "sm:col-span-2" : undefined}
+          >
             <ProjectCard project={project} />
           </FadeUp>
         ))}

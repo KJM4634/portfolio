@@ -1,4 +1,4 @@
-import { Mail, FileDown } from "lucide-react";
+import { Mail } from "lucide-react";
 import FadeUp from "@/components/motion/FadeUp";
 import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import MagneticButton from "./MagneticButton";
@@ -19,36 +19,29 @@ export default function Contact() {
 
       <FadeUp delay={0.2}>
         <div className="mt-12 flex flex-wrap gap-4">
-          <MagneticButton href="mailto:example@email.com" variant="solid">
+          <MagneticButton href="mailto:ssjm524@naver.com" variant="solid">
             <Mail size={16} />
             이메일 보내기
           </MagneticButton>
           <MagneticButton
-            href="https://github.com/example-user"
+            href="https://github.com/KJM4634"
             external
             variant="outline"
           >
             <GithubIcon size={16} />
             GitHub
           </MagneticButton>
-          <MagneticButton
-            href="https://linkedin.com/in/example-user"
-            external
-            variant="outline"
-          >
+          {/* TODO: LinkedIn URL 추가 */}
+          <MagneticButton href="#" variant="outline">
             <LinkedinIcon size={16} />
             LinkedIn
-          </MagneticButton>
-          <MagneticButton href="/resume.pdf" external variant="outline">
-            <FileDown size={16} />
-            이력서 다운로드
           </MagneticButton>
         </div>
       </FadeUp>
 
       <FadeUp delay={0.3}>
         <p className="mt-24 text-xs text-muted">
-          © 2026 김민준. Built with Next.js & Framer Motion.
+          © 2026 김정민. Built with Next.js & Framer Motion.
         </p>
       </FadeUp>
     </section>

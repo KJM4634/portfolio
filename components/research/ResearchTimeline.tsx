@@ -26,8 +26,13 @@ export default function ResearchTimeline() {
                 {item.category}
               </span>
               <div>
-                <h3 className="font-heading text-lg font-medium text-foreground">
+                <h3 className="flex items-center gap-2 font-heading text-lg font-medium text-foreground">
                   {item.title}
+                  {item.status === "ongoing" && (
+                    <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-medium text-accent">
+                      진행 중
+                    </span>
+                  )}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
                   {item.description}

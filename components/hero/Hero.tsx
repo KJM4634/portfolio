@@ -12,19 +12,19 @@ export default function Hero() {
 
       <div className="relative mx-auto w-full max-w-5xl">
         <p className="mb-6 font-mono text-sm text-accent">
-          AI Researcher (예정) · Computer Science
+          AI 대학원 진학 예정 · 경남대학교 컴퓨터공학부
         </p>
 
         <TextReveal
           as="h1"
-          text="AI를 연구하는 김민준입니다."
+          text="데이터로 문제를 파고드는 김정민입니다."
           className="font-heading text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl md:text-7xl"
         />
 
         <TextReveal
           as="p"
           delay={0.4}
-          text="컴퓨터공학을 전공하며 사람의 언어와 사고를 모델링하는 방법을 고민합니다. 2027년, 인공지능 대학원에 진학해 그 질문을 더 깊이 파고들 예정입니다."
+          text="경남대학교 컴퓨터공학부에서 소프트웨어를 전공하며, 의료 데이터 분석·예측과 컴퓨터비전을 중심으로 문제를 파고드는 걸 좋아합니다. 데이터를 꼼꼼히 들여다보는 과정에서 답을 찾는 편이고, 졸업 후에는 인공지능 대학원에 진학해 이 관심을 이어갈 예정입니다."
           className="mt-8 max-w-2xl font-body text-base leading-relaxed text-muted sm:text-lg"
         />
 
